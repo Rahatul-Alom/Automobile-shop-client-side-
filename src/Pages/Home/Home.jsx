@@ -2,6 +2,7 @@ import Banner from "../../Components/Header/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import Brands from "../../Components/Brands/Brands";
+import TotalCar from "../../Components/TotalCar/TotalCar";
 
 const Home = () => {
     const brands = useLoaderData()
@@ -14,6 +15,7 @@ const Home = () => {
                 brands.map(brand=> <Brands key={brand.id} brands={brand}></Brands>)
               }
             </div>
+            <TotalCar></TotalCar>
             <Footer></Footer>
         </div>
     );

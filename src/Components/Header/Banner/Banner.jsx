@@ -1,12 +1,7 @@
 const Banner = () => {
   return (
     <div>
-      <div
-        className="bg-cover bg-center min-h-screen"
-        style={{
-          backgroundImage: "url(https://i.ibb.co/SJxhwP5/img-1.jpg)",
-        }}
-      >
+      <div className="bg-cover bg-center min-h-screen"style={{backgroundImage: "url(https://i.ibb.co/SJxhwP5/img-1.jpg)",}}>
         <div className=""></div>
         <div className="">
           <div>
