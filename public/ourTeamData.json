@@ -1,0 +1,51 @@
+[
+    {
+      "id": "1",
+      "name": "Michale Nelson",
+      "image": "https://i.ibb.co/zHPkS1r/avatar-7.jpg",
+      "post": "CEO",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Martin Smith",
+      "image": "https://i.ibb.co/HxyrTCv/avatar-9.jpg",
+      "post": "CTO",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Malik Al Asar",
+      "image": "https://i.ibb.co/TMXh09g/avatar-3.jpg",
+      "post": "CFO",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "Natasha Amin",
+      "image": "https://i.ibb.co/K9RM9kP/avatar-8.jpg",
+      "post": "Marketing Manager",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Stiven Rogaes",
+      "image": "https://i.ibb.co/JyyGNS4/avatar-11.jpg",
+      "post": "Branch Manager",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    },
+    {
+      "id": "6",
+      "name": "Natalia Gomez",
+      "image": "https://i.ibb.co/0QhrdRS/avatar-6.jpg",
+      "post": "Customar Support Manager",
+      "mobile": "017997779456",
+      "email": "atuocar@gmail.com"
+    }
+  ]
+  

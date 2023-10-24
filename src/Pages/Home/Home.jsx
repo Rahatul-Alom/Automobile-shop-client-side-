@@ -3,6 +3,7 @@ import Footer from "../../Components/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import Brands from "../../Components/Brands/Brands";
 import TotalCar from "../../Components/TotalCar/TotalCar";
+import OurTeam from "../../Components/OurTeam/OurTeam";
 
 const Home = () => {
     const brands = useLoaderData()
@@ -16,6 +17,7 @@ const Home = () => {
               }
             </div>
             <TotalCar></TotalCar>
+            <OurTeam></OurTeam>
             <Footer></Footer>
         </div>
     );
