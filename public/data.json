@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "brand": "BMW",
+      "image": "https://i.ibb.co/wW3qWLL/bm.jpg"
+    },
+    {
+      "id": "2",
+      "brand": "Mercedes-Benz",
+      "image": "https://i.ibb.co/d4HRZtc/mercedece.webp"
+    },
+    {
+      "id": "3",
+      "brand": "Tesla",
+      "image": "https://i.ibb.co/f85W8Vg/5a57e00e28eeccc2008b4740.webp"
+    },
+    {
+      "id": "4",
+      "brand": "Rolls Royce",
+      "image": "https://i.ibb.co/nQKY7P5/rolls-royce-black.jpg"
+    },
+    {
+      "id": "5",
+      "brand": "Lamborghini",
+      "image": "https://i.ibb.co/t2Vn8Bv/gsg.jpg"
+    },
+    {
+      "id": "6",
+      "brand": "Audi",
+      "image": "https://i.ibb.co/qCKpqcB/ds.jpg"
+    }
+  ]
+  
