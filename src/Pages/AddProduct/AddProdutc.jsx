@@ -1,15 +1,39 @@
+import Swal from 'sweetalert2'
+
 const AddProdutc = () => {
 const handleAddProduct = event =>{
     event.preventDefault();
     
     const form = event.target;
+    const productType = form.productType.value;
     const name = form.name.value;
     const brand = form.brand.value;
     const photo = form.photo.value;
     const price = form.price.value;
     const rating = form.rating.value;
     const description = form.description.value;
-    console.log(name, brand, photo, price, rating, description)
+
+    const newProduct = {productType, name, brand, photo, price, rating, description}
+
+    fetch('http://localhost:5000/product',{
+        method: "Post",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify(newProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if(data.insertedId){
+          Swal.fire({
+            title: 'Success!',
+            text: 'Product added successfully',
+            icon: 'success',
+            confirmButtonText: 'Go Back'
+          })
+        }
+    })
 }
 
   return (
@@ -22,14 +46,15 @@ const handleAddProduct = event =>{
           <div className="hero-content mt-7">
             <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
               <form onSubmit={handleAddProduct} className="card-body">
-                {/* <div className="form-control">
-                <select className="select select-bordered w-full max-w-xl">
-                    <option disabled selected>Type Of Product</option>
-                     <option>SAVs</option>
-                     <option>Sedans</option>
-                     <option>Coupes</option>
-                </select>
-                </div> */}
+                <div className="form-control">
+                <select name="productType" defaultValue="Type Of Product" className="select select-bordered w-full max-w-xl">
+                <option value="Type Of Product" disabled>Type Of Product</option>    
+                <option value="SAV">SAV</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Coupe">Coupe</option>
+                <option value="Convertible">Convertible</option>
+            </select>
+                </div>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Name</span>

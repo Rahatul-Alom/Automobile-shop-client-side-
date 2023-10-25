@@ -16,12 +16,12 @@ const NavBar = () => {
 }
   const links = (
     <>
-      <li className=""><NavLink to={"/"}>Home</NavLink></li>
-      <li className=""><NavLink to={"/About"}>About Us</NavLink></li>
+      <li className="font-bold"><NavLink to={"/"}>Home</NavLink></li>
+      <li className="font-bold"><NavLink to={"/About"}>About Us</NavLink></li>
       {
         user&&<>
-           <li className=""><NavLink to={"/AddProduct"}>Add Product</NavLink></li>
-          <li className=""><NavLink to={"/MyCart"}>My Cart</NavLink></li>
+           <li className="font-bold"><NavLink to={"/AddProduct"}>Add Product</NavLink></li>
+          <li className="font-bold"><NavLink to={"/MyCart"}>My Cart</NavLink></li>
         </>
       }
     </>
@@ -49,7 +49,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-blue-950 rounded-box w-52"
           >
             {links}
           </ul>

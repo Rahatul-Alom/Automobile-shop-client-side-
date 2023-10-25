@@ -1,6 +1,5 @@
 import {
-    createBrowserRouter,
-    
+    createBrowserRouter,    
   } from "react-router-dom";
 import Root from "../Layout/Root";
 import ErrorPage from "../Pages/Error/ErrorPage";
@@ -11,6 +10,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "../Layout/PrivateRoute";
 import AddProduct from "../Pages/AddProduct/AddProdutc";
 import MyCart from "../Pages/MyCart/MyCart";
+import BrandDetails from "../Pages/BrandDetails/BrandDetails";
 
 
 const router = createBrowserRouter([
@@ -43,6 +43,11 @@ const router = createBrowserRouter([
         {
           path: "/MyCart",
           element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+        },
+        {
+          path: "/brandDetails/:brand",
+          element: <BrandDetails></BrandDetails>,
+          loader: () => fetch('http://localhost:5000/product')
         }
       ]
     },
