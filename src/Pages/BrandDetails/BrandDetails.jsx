@@ -3,12 +3,14 @@ import BrandDetailsCard from "./BrandDetailsCard";
 import { useEffect, useState } from "react";
 
 const BrandDetails = () => {
-  const products = useLoaderData();
   const [product, setProduct] = useState([]);
   const {brand} = useParams()
+
+  const products = useLoaderData();
+  
   useEffect(() => {
-    const bmws = products.filter((produtc) => produtc.brand === brand);
-    setProduct(bmws);
+    const cars = products.filter((produtc) => produtc.brand === brand);
+    setProduct(cars);
   }, [brand, products]);
   console.log(product);
   return (

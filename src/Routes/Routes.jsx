@@ -11,6 +11,7 @@ import PrivateRoute from "../Layout/PrivateRoute";
 import AddProduct from "../Pages/AddProduct/AddProdutc";
 import MyCart from "../Pages/MyCart/MyCart";
 import BrandDetails from "../Pages/BrandDetails/BrandDetails";
+import SeeDetail from "../Pages/SeeDetails/SeeDetail";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
         {
           path: "/brandDetails/:brand",
           element: <BrandDetails></BrandDetails>,
+          loader: () => fetch('http://localhost:5000/product')
+        },
+        {
+          path: "/seeDetails/:_id",
+          element: <PrivateRoute><SeeDetail></SeeDetail></PrivateRoute>,
           loader: () => fetch('http://localhost:5000/product')
         }
       ]
