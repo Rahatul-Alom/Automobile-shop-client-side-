@@ -36,7 +36,7 @@ const Login = () => {
 
     return (
         <div>
-        <h1 className="text-5xl text-center font-bold text-black mx-5 pt-7 ">Login your account</h1>
+        <h1 className="text-5xl text-center font-bold mx-5 pt-7 ">Login your account</h1>
         <div className="hero min-h-screen">
           <div className="hero-content ">
             <div className="text-center">

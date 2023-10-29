@@ -1,11 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {AuthContext} from "../../../Context/AuthProvider"
-import userImg from "../../../assets/userImg.jpg"
-
+import { BsMoonFill } from 'react-icons/bs';
 
 const NavBar = () => {
   const {user, logOut} = useContext(AuthContext)
+  const [mode, setMode] = useState('light')
+
+   function changeTheme () {
+    const html = document.documentElement
+
+    if (mode === 'light') {
+      html.setAttribute('data-theme', 'dark');
+      setMode('dark');
+      localStorage.setItem('mode', 'dark')
+    } else {
+      html.setAttribute('data-theme', 'light');
+      setMode('light');
+      localStorage.setItem('mode', 'light')
+    }
+    
+  }
+
+  useEffect(()=>{
+    const currentMode = localStorage.getItem('mode') || 'light'
+    setMode(currentMode)
+    const html = document.documentElement
+    html.setAttribute('data-theme', currentMode)
+  },[])
 
   const handleSingOut = () =>{
     logOut()
@@ -76,11 +98,12 @@ const NavBar = () => {
             :
              <>
             <div className="w-10 rounded-full mr-4">
-               <img src="https://i.ibb.co/XsDHQ4n/user-Defaulf.png" />
+               <img className="rounded-full" src="https://i.ibb.co/XsDHQ4n/user-Defaulf.png" />
              </div>
             <Link to="/Login"><button className="btn bg-blue-950 text-white font-semibold">Login</button></Link>
             </>
         }
+        <button onClick={changeTheme} className="btn btn-primary"><BsMoonFill></BsMoonFill></button>
       </div>
     </div>
   );
