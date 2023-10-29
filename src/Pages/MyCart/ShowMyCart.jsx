@@ -13,7 +13,7 @@ const SowMyCart = ({myCartProduct}) => {
     ));
 
     const handleDelete = id =>{
-      fetch(`http://localhost:5000/myCart/${id}`,{
+      fetch(`https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/myCart/${id}`,{
         method: "DELETE"
       })
       .then(res=> res.json())

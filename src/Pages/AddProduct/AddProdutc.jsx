@@ -29,7 +29,7 @@ const AddProdutc = () => {
       description,
     };
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

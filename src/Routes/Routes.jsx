@@ -49,22 +49,22 @@ const router = createBrowserRouter([
         {
           path: "/brandDetails/:brand",
           element: <BrandDetails></BrandDetails>,
-          loader: () => fetch('http://localhost:5000/product')
+          loader: () => fetch('https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/product')
         },
         {
           path: "/seeDetails/:_id",
           element: <PrivateRoute><SeeDetail></SeeDetail></PrivateRoute>,
-          loader: () => fetch('http://localhost:5000/product')
+          loader: () => fetch('https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/product')
         },
         {
           path: "/updateProduct/:id",
           element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+          loader: ({params}) => fetch(`https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/product/${params.id}`)
         },
         {
           path : "/MyCart/_id",
           element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-          loader: () => fetch('http://localhost:5000/myCart')
+          loader: () => fetch('https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/myCart')
         }
       ]
     },

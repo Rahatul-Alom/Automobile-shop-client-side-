@@ -12,7 +12,7 @@ const ShowSeeDetails = ({details}) => {
 
 
   const handleAddToCart = ()=>{
-      fetch(`http://localhost:5000/myCart`,{
+      fetch(`https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/myCart`,{
         method: "POST",
         headers: {
             "content-type": "application/json"

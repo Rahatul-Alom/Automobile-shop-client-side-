@@ -8,7 +8,7 @@ const MyCart = () => {
     // const showMyCartProducs = useLoaderData();
     
     useEffect(() => {
-        fetch('http://localhost:5000/myCart')
+        fetch('https://automobile-brand-server-uwuerlnzt-rahatul-aloms-projects.vercel.app/myCart')
         .then(res => res.json())
         .then(data => setMyCartProduct(data))
     }, []);

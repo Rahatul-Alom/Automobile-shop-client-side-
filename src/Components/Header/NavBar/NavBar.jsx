@@ -78,7 +78,7 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <img src="https://i.ibb.co/S0xvwZj/7941372.png" className="h-9" alt="" />
+        <img src="https://i.ibb.co/jynGXXm/7941372.png" className="h-9" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -103,7 +103,7 @@ const NavBar = () => {
             <Link to="/Login"><button className="btn bg-blue-950 text-white font-semibold">Login</button></Link>
             </>
         }
-        <button onClick={changeTheme} className="btn btn-primary"><BsMoonFill></BsMoonFill></button>
+        <button onClick={changeTheme} className="btn btn-primary"><BsMoonFill className="text-white"></BsMoonFill></button>
       </div>
     </div>
   );
