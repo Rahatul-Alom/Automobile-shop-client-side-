@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {AuthContext} from "../../../Context/AuthProvider"
+import userImg from "../../../assets/userImg.jpg"
+
 
 const NavBar = () => {
   const {user, logOut} = useContext(AuthContext)
@@ -10,7 +12,7 @@ const NavBar = () => {
     .then(result =>{
         console.log(result)
     })
-    .cacth(error =>{
+    .catch(error =>{
         console.log(error)
     })
 }
@@ -49,7 +51,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-blue-950 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
           >
             {links}
           </ul>
@@ -62,18 +64,22 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      <div className="w-10 rounded-full mr-4">
-          <img src="https://i.ibb.co/XsDHQ4n/user-Defaulf.png" />
-      </div>
       {
-            user ? 
+            user?. email ? 
               <>
+             <span className="mr-3 font-semibold"> {user.displayName} </span>
+                <div className="w-10 rounded-full mr-3">
+                  <img className="rounded-full" src={user.photoURL} />
+                </div>
                  <button onClick={handleSingOut} className="btn bg-blue-950 text-white font-semibold">Sing Out</button>
-                <span> {user.name} </span>
               </>
             :
+             <>
+            <div className="w-10 rounded-full mr-4">
+               <img src="https://i.ibb.co/XsDHQ4n/user-Defaulf.png" />
+             </div>
             <Link to="/Login"><button className="btn bg-blue-950 text-white font-semibold">Login</button></Link>
-
+            </>
         }
       </div>
     </div>
