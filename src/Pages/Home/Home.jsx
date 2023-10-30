@@ -2,7 +2,7 @@ import Banner from "../../Components/Header/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import Brands from "../../Components/Brands/Brands";
-import TotalCar from "../../Components/TotalCar/TotalCar";
+import TotalCar from "../../Components/OurAchivement/OurAchivement";
 import OurTeam from "../../Components/OurTeam/OurTeam";
 
 const Home = () => {

@@ -11,7 +11,7 @@ const OurTeam = () => {
     .then(data=> setOurTeamCard(data))
   },[])  
   return (
-        <div className="my-24" > 
+        <div className="my-24 mx-auto max-w-6xl" > 
           <h1 className="text-center font-bold text-5xl lg:text-6xl">Meet Our Team</h1>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7">             
             {
