@@ -3,6 +3,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Context/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
+
 
 const Register = () => {
     const [singUpError, setSingUpError] = useState('')
@@ -35,6 +37,12 @@ const Register = () => {
     createUser(email, password)
         .then(result =>{
             console.log(result)
+            Swal.fire({
+              title: 'Success!',
+              text: 'Registration Successful',
+              icon: 'success',
+              confirmButtonText: 'Go Back'
+            })
         })
         .catch(error =>{
             console.log(error)
